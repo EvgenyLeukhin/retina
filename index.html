@@ -2,10 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<!--     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"> -->
-    <meta name="viewport" content="width=200">
+    <!-- ширина вьюпорта по ширине устройства без маштабирования-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <!-- имитация ширины вьюпорта, как будто она 340px-->
+    <!-- <meta name="viewport" content="width=340"> -->
     <title>Retina - example</title>
     <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
       h4 { text-align: center; }
       img {
         display: block;
