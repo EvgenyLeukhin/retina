@@ -2,47 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- ширина вьюпорта по ширине устройства без маштабирования-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-
-    <!-- имитация ширины вьюпорта, как будто она 340px-->
-    <!-- <meta name="viewport" content="width=340"> -->
-    <title>Retina - example</title>
+    <title>Retina - TEST</title>
     <style>
-      html, body {
-        margin: 0;
-        padding: 0;
-      }
-      h2 { text-align: center; }
-      img.retina {
+      * { margin: 0; padding: 0; }
+     h2 { text-align: center;    }
+     img.retina {
         display: block;
         margin: 50px auto;
-      }
-      img.adapt {
-        margin: 0;
       }
     </style>
 </head>
 <body>
 
 <h2>Поддержка ретины</h2>
-<!-- IE и Edge НЕ ПОДДЕРЖИВАЮТ!!! -->
-<!-- Ширина картинки задана 200px, но для ретины будут грузиться другие с большим разрешением -->
+<!-- IE и Edge not support! -->
+<!-- 
+  200-red.png    - if no-retina  or not-supported
+  300-green.png  - if 1.5x-retina
+  400-blue.png   - if 2x-retina
+  600-yellow.png - if 3x-retina
+ -->
 <img class="retina"
-      src="200-red.png" width="200" alt="some-img"
-  srcset="300-green.png  1.5x,
-          400-blue.png   2x,
-          600-yellow.png 3x">
-
-<!-- <h2>Поддержка ретины + адаптивность</h2> -->
-<!-- На ширине 200w будет загружен 200-red.png, на 300w - 300-green.png-->
-<!-- Мозилла грузит разные картинки, работает ПРАВИЛЬНО -->
-<!-- Хром и Эдж грузят самый последний, работает НЕ ПРАВИЛЬНО -->
-<!-- <img class="adapt"
-       src="200-red.png"
-    srcset="200-red.png    200w,
-            300-green.png  300w,
-            400-blue.png   400w,
-            600-yellow.png 600w"> -->
+      src="200-red.png" width="200" alt="retina-index-img"
+   srcset="300-green.png  1.5x,
+           400-blue.png   2x,
+           600-yellow.png 3x">
 </body>
 </html>
